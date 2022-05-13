@@ -7,7 +7,7 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 // set view engine to ejs
 app.set('view engine', 'ejs');
