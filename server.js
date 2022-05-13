@@ -12,9 +12,13 @@ app.listen(port, () => {
 // set view engine to ejs
 app.set('view engine', 'ejs');
 
-//index
+//index page
 app.get('/', (req, res) => {
-  res.render('pages/index');
+  let name = 'Thije';
+
+  res.render('pages/index', {
+    name: name
+  });
 });
 
 //about page
