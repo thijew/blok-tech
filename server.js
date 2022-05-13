@@ -21,7 +21,17 @@ app.get('/', (req, res) => {
   });
 });
 
-//about page
-app.get('/about', (req, res) => {
-  res.render('pages/about');
+//login page
+app.get('/login', (req, res) => {
+  res.render('pages/login');
+});
+
+//sign up page
+app.get('/sign-up', (req, res) => {
+  res.render('pages/sign-up');
+});
+
+//create-profile page
+app.get('/create-profile', (req, res) => {
+  res.render('pages/create-profile');
 });

@@ -1,0 +1,11 @@
+/* header */
+.title { 
+    text-align: center;
+};
+
+/* Footer */
+.footer-text { 
+    background-color: red;
+    position: relative;
+    bottom: 0px;
+};
