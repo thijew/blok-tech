@@ -35,3 +35,29 @@ app.get('/sign-up', (req, res) => {
 app.get('/create-profile', (req, res) => {
   res.render('pages/create-profile');
 });
+
+
+
+/////////Test profiel
+const cookingProfile = [
+        {
+              id: '1',
+              name: 'Piet Veen',
+              age:  '24',
+              countries: ['netherlands', 'german', 'french'],
+              cookingSkills: ['meat', 'vegan']
+        }
+]
+
+////////////////////////////////Mongo db////////////////////////////////
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://thijew:hQr@b@7kEz82hW4@blok-tech.ukeqi.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("blok-tech").collection("cookingmatch");
+console.log("succes");
+console.log(err)
+  
+});
+/////////////////////////////////////////////////////////////////////////
